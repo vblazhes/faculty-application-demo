@@ -11,7 +11,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/api/professor")
+@RequestMapping("/api/professors")
 public class ProfessorsController {
 
     private final ProfessorsService professorsService;
