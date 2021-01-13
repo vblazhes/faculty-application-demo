@@ -4,9 +4,11 @@ import com.netcetera.demoapplication.model.Course;
 import com.netcetera.demoapplication.model.exception.CourseNotFoundException;
 import com.netcetera.demoapplication.repository.CoursesRepository;
 import com.netcetera.demoapplication.service.CoursesService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class CoursesServiceImpl implements CoursesService {
 
     CoursesRepository coursesRepository;

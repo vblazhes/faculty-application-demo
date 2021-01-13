@@ -4,9 +4,11 @@ import com.netcetera.demoapplication.model.Professor;
 import com.netcetera.demoapplication.model.exception.ProfessorNotFoundException;
 import com.netcetera.demoapplication.repository.ProfessorsRepository;
 import com.netcetera.demoapplication.service.ProfessorsService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class ProfessorsServiceImpl implements ProfessorsService {
 
     ProfessorsRepository professorsRepository;
