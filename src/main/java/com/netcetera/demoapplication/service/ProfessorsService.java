@@ -12,5 +12,5 @@ public interface ProfessorsService {
 
     Professor save(Professor professor);
 
-    void deleteById(Long id);
+    void deleteProfessorById(Long id);
 }
