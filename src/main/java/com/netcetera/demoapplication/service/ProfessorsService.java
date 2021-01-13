@@ -4,7 +4,7 @@ import com.netcetera.demoapplication.model.Professor;
 
 import java.util.List;
 
-public interface ProfessorsRepository {
+public interface ProfessorsService {
 
     List<Professor> getAllProfessors();
 
@@ -12,5 +12,5 @@ public interface ProfessorsRepository {
 
     Professor save(Professor professor);
 
-    Professor deleteById(Long id);
+    void deleteById(Long id);
 }
