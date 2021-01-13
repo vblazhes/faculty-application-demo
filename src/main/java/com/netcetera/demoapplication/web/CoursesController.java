@@ -14,7 +14,7 @@ import java.util.List;
 @RequestMapping("/api/courses")
 public class CoursesController {
 
-    CoursesService coursesService;
+    private final CoursesService coursesService;
 
     CoursesController(CoursesService coursesService){
         this.coursesService = coursesService;

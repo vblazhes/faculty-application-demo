@@ -14,7 +14,7 @@ import java.util.List;
 @RequestMapping("/api/professor")
 public class ProfessorsController {
 
-    ProfessorsService professorsService;
+    private final ProfessorsService professorsService;
 
     ProfessorsController(ProfessorsService professorsService){
         this.professorsService = professorsService;
