@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 public class CoursesServiceImpl implements CoursesService {
 
-    CoursesRepository coursesRepository;
+    private final CoursesRepository coursesRepository;
 
     CoursesServiceImpl(CoursesRepository coursesRepository){
         this.coursesRepository = coursesRepository;
