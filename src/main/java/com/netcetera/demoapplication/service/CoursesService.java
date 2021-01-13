@@ -12,7 +12,6 @@ public interface CoursesService {
 
     Course save(Course course);
 
-    
-
+    void deleteCourseByCode(String code);
 
 }
