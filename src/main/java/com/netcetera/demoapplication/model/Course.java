@@ -1,6 +1,7 @@
 package com.netcetera.demoapplication.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -8,7 +9,9 @@ import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import java.util.Set;
 
 @Entity
 @NoArgsConstructor
@@ -24,6 +27,10 @@ public class Course {
 
     @ManyToOne
     private Professor professor;
+
+    @ManyToMany(mappedBy = "courses")
+    @JsonIgnore
+    private Set<Student> students;
 
     public Course(String code, String name) {
         this.code = code;
