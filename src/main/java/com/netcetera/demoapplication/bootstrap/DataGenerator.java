@@ -63,10 +63,10 @@ public class DataGenerator {
         courses.add(course7);
         courses.add(course8);
 
-        Student student1 = new Student("161010","Vladimir","Blazheski",22);
-        Student student2 = new Student("161011","Nikola","Maroski",23);
-        Student student3 = new Student("161012","Fisnik","Limani",23);
-        Student student4 = new Student("161002","Marjan","Ralevski",22);
+        Student student1 = new Student("161010","Vladimir","Blazheski",22, new HashSet<>());
+        Student student2 = new Student("161011","Nikola","Maroski",23, new HashSet<>());
+        Student student3 = new Student("161012","Fisnik","Limani",23, new HashSet<>());
+        Student student4 = new Student("161002","Marjan","Ralevski",22, new HashSet<>());
 
         students.add(student1);
         students.add(student2);
@@ -96,8 +96,26 @@ public class DataGenerator {
             professor3.addCourse(course7);
             professor3.addCourse(course8);
 
+            student1.getCourses().add(course1);
+            student1.getCourses().add(course2);
+            student1.getCourses().add(course5);
+            student1.getCourses().add(course7);
+            student2.getCourses().add(course1);
+            student2.getCourses().add(course2);
+            student2.getCourses().add(course4);
+            student2.getCourses().add(course3);
+            student3.getCourses().add(course1);
+            student3.getCourses().add(course4);
+            student3.getCourses().add(course7);
+            student3.getCourses().add(course8);
+            student4.getCourses().add(course2);
+            student4.getCourses().add(course4);
+            student4.getCourses().add(course5);
+            student4.getCourses().add(course8);
+
             professorsRepository.saveAll(professors);
             coursesRepository.saveAll(courses);
+            studentsRepository.saveAll(students);
         }
     }
 }
